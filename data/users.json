@@ -9,14 +9,6 @@
       }
     },
     {
-      "password": "user123",
-      "email": "jean@example.com",
-      "infos": {
-        "prenom": "Jean",
-        "theme": "sombre"
-      }
-    },
-    {
       "password": "test123",
       "email": "test@test.fr",
       "infos": {

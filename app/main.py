@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.auth import router as auth_router
 from app.admin import router as admin_router
+from app.event import router as event_router
 
 app = FastAPI(title="Backend Auth JSON")
 
@@ -15,6 +16,7 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(admin_router)
+app.include_router(event_router)
 
 @app.get("/")
 def root():

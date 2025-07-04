@@ -25,3 +25,14 @@ class UserUpdateRequest(BaseModel):
 class AdminAuthRequest(BaseModel):
     admin_password: str
     password: Optional[str] = None
+
+class AdminEventRequest(BaseModel):
+    admin_password: str
+    name: str
+    date: str
+    link: Optional[str] = None  
+
+class StoredEvent(BaseModel):
+    name : str
+    date : str
+    link : Optional[str]
