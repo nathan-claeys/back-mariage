@@ -1,10 +1,9 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings  # ✅ nouveau module
 
 class Settings(BaseSettings):
-    DATABASE_URL: str
-    JWT_SECRET: str
     ADMIN_PASSWORD: str
-    ALLOWED_ORIGINS: str  # pour les CORS (front autorisé)
+    JWT_SECRET: str
+    JWT_EXPIRE_MINUTES: int
 
     class Config:
         env_file = ".env"

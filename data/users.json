@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "password": "abc123",
+      "email": "jean@example.com",
+      "infos": {
+        "prenom": "Jean",
+        "theme": "clair"
+      }
+    },
+    {
+      "password": "user123",
+      "email": "jean@example.com",
+      "infos": {
+        "prenom": "Jean",
+        "theme": "sombre"
+      }
+    },
+    {
+      "password": "test123",
+      "email": "test@test.fr",
+      "infos": {
+        "prenom": "Test",
+        "theme": "vert"
+      }
+    }
+  ]
+}
