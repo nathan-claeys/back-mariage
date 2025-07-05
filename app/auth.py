@@ -24,6 +24,7 @@ def verify_token(token: str) -> str:
     except JWTError:
         raise HTTPException(status_code=401, detail="Token invalide ou expiré")
 
+@router.get("/me", response_model=StoredUser)
 def get_current_user(authorization: Optional[str] = Header(None)) -> StoredUser:
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Token manquant")

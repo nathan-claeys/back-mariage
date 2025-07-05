@@ -10,6 +10,15 @@ router = APIRouter(prefix="/admin")
 def check_admin_password(admin_password: str):
     if admin_password != settings.ADMIN_PASSWORD:
         raise HTTPException(status_code=403, detail="Mot de passe admin incorrect")
+    
+@router.post("/is-admin", response_model=bool)
+def is_admin(request: AdminAuthRequest):
+    """
+    Vérifie si le mot de passe admin est correct.
+    Retourne True si c'est le cas, sinon lève une exception HTTP 403.
+    """
+    check_admin_password(request.admin_password)
+    return True
 
 @router.post("/add-password")
 def add_password(request: AdminAuthRequest):
